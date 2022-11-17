@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Surface Graphs </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <style>
+      h1 {color:#000000; font-size:50px;} h2 {color:#000000; font-size:30px;}
+      iframe[seamless] {
+    border: none;
+}
+    </style>
+    
+    
+  </head>
+
+  <body bgcolor="#ffffff">
+    
+    <div style="width:100%; max-width:1000px; min-width: 800px; margin-left:auto; margin-right:auto;">
+      
+	  
+	<th style="text-align:centre; min-width:300px">
+	  <h1> Surface Graphs </h1>
+	</th>
+      
+      <hr style="border:2px solid black">
+      
+     
+      <p>
+		  The following graphs show the phase space for the LV system with second and third order interactions between species.
+		  The mean value of the second order interactions (mu_2) is on the x-axis, and the mean value of the third order interactions is on the y-axis.
+		  Each pair of graphs has different combination of covariances of the interactions (gamma_2 and gamma_3).
+		  For each pair, the graph on the left has the variance of the third order interactions set to zero (sigma_3 = 0).
+		  Interaction variance (and covariance) is only displaced in the second order interactions, with the standard deviation value (sigma_2) on the z-axis.
+		  The graph on the right has no second order variance (sigma_2 = 0), and third order standard deviation (sigma_3) on the z-axis.
+		  The red surfaces show the instability point, where systems with values of sigma below this surface will converge to a unique fixed point.
+		  The blue and green surfaces show the divergent point, where systems with values of sigma above the surface, or values of mu greater than on the surface, will display unbounded growth.
+		  The blue and green surfaces show the same transition point, the difference is colour refers only to the different condition they satisfied in order to be found.
+		  In between the red and the green-blue surfaces, systems will display either multiple fixed points or persistant dynamics.
+		  Each pair of graphs can be thought of as projections of the same four-dimentional space, with axes mu_2, mu_3, sigma_2, sigma_3, projected onto the sigma_2 = 0 and sigma_3 = 0 axes.
+		  There exists a smooth transition between each figure on the left to its partner on the right, which is explored later.
+		  
+      </p>
+  
+      <hr style="border:2px solid black">
+      
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyG.html" height="525" width="100%"></iframe> <!-- -1 -0.5 --> 
+    
+    <p>
+    Both values of gamma are set at their minimum values, meaning the interaction coefficients between each group of two or three species sum to their respective mean value.
+    This is like a zero-sum game, where an increased benefit to one species will mean a detriment to other species within an interaction.
+    These are exploitative interactions, like one species eating another.
+    This has a stabilizing effect, these graphs have the highest volume of the stable phase.
+    For sigma_3 = 0 (left graph), there is no red surface, this is because sigma_2 can be increased indefinitly without causing the system to become unstable.
+    The system displays unbounded growth for values of mu greater than on the blue surface, and converges to a unique fixed point for values of mu lower than on the surface.
+    For sigma_2 = 0 (right graph), the blue surface is the same, but the red surface shows the maximum value of sigma_3 where a unique fixed point can be found.
+    Above the red surface we find persistant osscilitory dynamics.
+    
+	I like to compare this to the hawk-dove game, where it does oscilate, but eventually reaches a stable fixed point.
+	However, the third order game rock-paper-scissors will continue to oscilate without converging to a fixed point.
+    </p> 
+    
+    <hr style="border:2px solid black">
+    
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyM.html" height="525" width="100%"></iframe> <!-- -0.8 -0.4 --> 
+    
+    <p>
+    We increase the values of gamma slightly, so interactions are still anticorrelated, but not as much as possible.
+    We now find a red surface on the left graph (sigma_3 - 0), a value of sigma_2 above which we find persistant dynamics, and a unique fixed point below.
+    The flat red surface shows this value of sigma_2 is independent of values of mu, and only depends on values of gamma.
+	The red surface on the right (sigma_2 = 0) is not flat, and the instability value of sigma_3 depends on values of mu.
+	For sigma_2 = 0, the divergent surface bends over the red surface, meaning that a further increase to sigma_3 will eventually cause unbounded growth.
+	However, for sigma_3 = 0, sigma_2 can be increased above the red surface without ever causing unbounded growth.
+    
+    </p>
+    
+     <hr style="border:2px solid black">
+    
+	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyF.html" height="525" width="100%"></iframe> <!-- 0 0 -->
+	
+	<p>
+	
+	Both gamma_2 and gamma_3 are set to zero, meaning there is no correlation between interaction coefficients within an interaction pair or group.
+	For sigma_3 = 0, the red surface is at a lower value than before, showing decreased stability in the system.
+	The divergent surface has bent over so increasing sigma_2 will eventually cause systems with mu_3 > 0 to display unbounded growth.
+	This "wall" at mu_3 = 0 shows mu_3 has a much greater effect on the behaviour of the system than mu_2.
+	The green surface on the right figure is lower than before, meaning a lower sigma_3 is required to cause unbounded growth in the system.
+	The red surface for sigma_2 = 0 is slightly lower, and the region between these surfaces is small.
+	
+	</p>
+	
+	<hr style="border:2px solid black">
+	
+	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyJ.html" height="525" width="100%"></iframe> <!-- 0.4 0.4 -->
+	
+	<p>
+	Interaction coefficients are now correlated, meaning each species will recieve a similar outcome from an interaction.
+	This has the effect of reducing stability, and further increasing the phase volume with unbounded growth.
+	For sigma_2 = 0, the red surface is only slightly underneeth the green surface, making it look like one yellow surface, which it is not.
+	In some places the red surface has merged with the green surface, causing the red surface to look like it is receeding to the left.
+	without the red surface, an increase of sigma_3 can transition the system from a unqiue stable fixed point straight to unbounded growth, without unstable bounded behaviour between.
+	</p>
+	
+	<hr style="border:2px solid black">
+	
+	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyH.html" height="525" width="100%"></iframe> <!-- 1 1 -->
+	
+	<p>
+	Both types of interacts are symmetrically correlated, meaning all species will have equal interaction coefficients for a given interaction.
+	This has the effect of even further destabilising the system, lowering the red surface for sigma_3 = 0, and both surfaces for sigma_2 = 0.
+	The red surface is no longer visable for the range of parameters shown for sigma_2 = 0.
+	The red surface has merged with the geen, and receeded further to the left out of range.
+	If the graph was extended to lower values of mu_2 and mu_3, the red surface would become visable.
+     
+     </p>
+     
+    <hr style="border:2px solid black">
+    
+    <!--
+    
+	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyK.html" height="525" width="100%"></iframe> 
+	
+	For this system the second order interactions are antisymmteric, and the third order interaction are symmetric.
+	We find the phase diagram to be the same as before for second order antisymmetric interactions for sigma_3 = 0, and the same as symmetric third order interactions for sigma_2 = 0.
+	This shows that when sigma_i = 0, then gamma_i has no effect on the system.
+	
+	<hr style="border:2px solid black">
+    
+	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./plotlyyL.html" height="525" width="100%"></iframe>
+	
+	Now symmetric second order interactions and antisymmetric third order interactions.
+	
+	<hr style="border:2px solid black"> -->
+      
+   
+      
+    </div>
+  </body>
+  
+</html>
